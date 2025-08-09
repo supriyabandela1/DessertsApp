@@ -14,7 +14,7 @@ function App() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-    fetch("https://localhost:7202/api/products") // Replace with your Swagger API URL
+    fetch("https://dessertsapp.onrender.com/api/products") // Replace with your Swagger API URL
       .then(res => res.json())
       .then(data => {
         console.log("Fetched products:", data);
