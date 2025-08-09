@@ -1,5 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 .App {
-  text-align: center;
+  font-family:sans-serif
 }
 
 .App-logo {
@@ -15,7 +23,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +36,357 @@
   color: #61dafb;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  width: 250px;
+  padding: 20px;
+  background-color: #ffe6eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.product-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff4d6d;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product-card button:hover {
+  background-color: #e8435d;
+}
+
+.cart {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.item-name {
+  flex: 2;
+  text-align: left;
+}
+
+.item-total {
+  flex: 1;
+  text-align: right;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.order-total {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.confirm-btn {
+  background-color: #FF4D60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button {
+  background: #ff4d6d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card .add-to-cart-btn {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px auto;
+  gap:8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-icon {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 8px;
+  object-fit: contain !important;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f5f5f5;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 400px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.modal-content p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.modal-content li img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.cart-item-details {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.cart-item-details span {
+  flex-grow: 1;
+}
+
+.modal-content .order-total {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-content button + button {
+  margin-left: 12px;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.modal-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.modal-total {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+}
+
+.confirm-order-btn {
+  margin-top: 25px;
+  background-color: #FF4D60;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.confirm-order-btn:hover {
+  background-color: #e04356;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: flex-start;
+}
+/* Layout container: places products and cart side by side */
+/* Heading Style */
+.main-heading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Layout fix */
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+/* Left: Product cards */
+.product-section {
+  flex: 3;
+}
+
+/* Right: Cart section */
+.cart-section {
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* Product grid */
+.product-list {
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  margin:48px;
+  padding: 0;;
+  /* justify-content: center; */
+}
+
+/* Product card style */
+.product-card {
+  margin:0px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Cart box */
+.cart {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+ overflow-wrap: break-word;
+ word-break:break-word;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
